@@ -1,0 +1,11 @@
+// Global variables
+@import '../../../base/vars';
+@import '../../../base/functions';
+@import '../../../base/mixins';
+
+// Frontend variables
+@import '../../base/vars';
+@import '../../base/mixins';
+
+// Amp scope variables
+@import './mixins';

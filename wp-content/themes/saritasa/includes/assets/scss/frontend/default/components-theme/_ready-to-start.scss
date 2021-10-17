@@ -1,0 +1,68 @@
+.ready-to-start {
+    margin-top: -12vw;
+
+    > .col.span_12 {
+        width: 90%;
+    }
+
+    @media(max-width: 480px) {
+        padding-top: 20vw;
+        padding-bottom: 10vw;
+    }
+
+    @media(min-width: 481px) {
+        padding-top: 15vw;
+        padding-bottom: 5vw;
+    }
+
+    @media(min-width: 1441px) {
+        padding-top: 8vw;
+        padding-bottom: 3vw;
+    }
+
+    .row-bg{
+        background-image: url($images-path + 'about-saritasa.webp');
+        background-position: center top;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    h2 {
+        @include font-avenir-white(600, 36px, 49px);
+        text-align: center;
+        margin-bottom: 20px;
+
+        @media(max-width: 480px) {
+            font-size: 26px;
+            line-height: 32px;
+        }
+
+        @media (min-width: 481px) and (max-width: 767px) {
+            font-size: 43px;
+            line-height: 52px;
+        }
+
+        @media(min-width: 1101px) {
+            font-size: 54px;
+            line-height: 74px;
+        }
+
+    }
+
+    .vc_btn3-container {
+        text-align: center;
+
+        button {
+            @include font-avenir-atoll(600, 18px, 25px);
+            border-radius: 100px;
+            background-color: #fff;
+            padding: 10px 60px !important;
+            cursor: pointer;
+            border: 1px solid #fff;
+
+            @media (max-width: 480px) {
+                font-size: 14px;
+            }
+        }
+    }
+}

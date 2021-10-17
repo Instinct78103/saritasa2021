@@ -1,0 +1,36 @@
+@import '../base/index';
+
+@import '../components-theme/saritasa-logo-bg__home-and-services';
+@import '../components/buttons';
+@import '../components/posts-filter__projects-and-resources';
+@import '../components/resources-post-item';
+@import '../components/page-header-wrap__projects-and-resources';
+@import '../components-theme/popup_contact-form';
+
+.post-item {
+    margin: 0 20px 20px;
+
+    @media (max-width: 480px) {
+        width: calc(100% - 40px);
+
+        &:first-child {
+            margin-top: 20px;
+        }
+    }
+
+    @media (min-width: 481px) and (max-width: 690px) {
+        width: calc(100% - 40px);
+
+        &:first-child {
+            margin-top: 20px;
+        }
+    }
+
+    @media (min-width: 691px) {
+        width: calc(50% - 40px);
+    }
+
+    @media (min-width: 992px) {
+        width: calc(33.3333% - 40px);
+    }
+}

@@ -1,0 +1,96 @@
+.contact-form {
+    background-color: #fff;
+    padding: 6%;
+
+    .wpcf7 {
+        background-color: #fff;
+
+        .screen-reader-response,
+        .wpcf7-response-output,
+        .wpcf7-not-valid-tip {
+            display: none !important;
+        }
+
+        .wpcf7-form-control-wrap.message {
+            line-height: 0;
+        }
+
+        form {
+            display: flex;
+            flex-flow: row wrap;
+            justify-content: space-between;
+
+            @media(max-width: 999px) {
+                flex-direction: column;
+                .span_6 {
+                    width: 100%;
+                }
+            }
+
+            @media (min-width: 1000px) {
+                .span_6 {
+                    width: 48%
+                }
+
+                .span_12 {
+                    width: 100%
+                }
+            }
+        }
+
+        label {
+            @include font-avenir-big-stone(600, 16px, 22px);
+            border-width: 0;
+            margin-bottom: 16px;
+        }
+
+        textarea,
+        input {
+            width: 100%;
+            background-color: #F4F5F5;
+            border: none;
+            border-bottom: 2px solid #C4CAC7;
+            margin: 16px 0;
+            @include font-avenir-black(400, 18px, 25px);
+            padding: 0 4px;
+
+            &::placeholder {
+                /**
+                According to design.
+                The placeholder MUST BE PRESENTED otherwise the Saritasa CRM won't work as expected.
+                Therefore, we use a transparent color
+                 */
+                color: transparent;
+            }
+
+
+            &:focus {
+                outline: none;
+                border-bottom-color: #000;
+            }
+        }
+
+        input {
+            height: 50px;
+            width: 100%;
+
+            &.wpcf7-not-valid {
+                border: 2px solid red;
+
+                &::placeholder {
+                    color: darkGray;
+                }
+            }
+        }
+
+        button {
+            width: 100%;
+            background-color: $color-theme;
+            @include font-avenir-white(600, 18px, 25px);
+            border: none;
+            height: 70px;
+            border-radius: 35px;
+            margin-top: 16px;
+        }
+    }
+}

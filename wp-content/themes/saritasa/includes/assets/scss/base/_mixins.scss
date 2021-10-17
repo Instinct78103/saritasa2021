@@ -1,0 +1,26 @@
+// Background
+@mixin background-image($size: cover, $position: center, $url: null, $main: ()) {
+    $default: (
+        background-repeat: no-repeat,
+        background-position: $position,
+        background-size: $size
+    );
+
+    @if $url {
+        $default: map-merge($default, (background-image: url($url)));
+    }
+
+    @each $main-name, $main-value in map-merge($default, $main) {
+        @if $main-value {
+            #{$main-name}: $main-value;
+        }
+    }
+}
+
+@mixin background-image-cover($url: null, $main: ()) {
+    @include background-image(cover, center, $url, $main);
+}
+
+@mixin background-image-contain($url: null, $main: ()) {
+    @include background-image(contain, center, $url, $main);
+}

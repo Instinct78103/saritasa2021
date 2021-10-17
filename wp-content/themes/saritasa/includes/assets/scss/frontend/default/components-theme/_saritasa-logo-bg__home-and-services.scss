@@ -1,0 +1,8 @@
+@include site-bg();
+
+.container.main-content {
+    & > .row > div {
+        position: relative;
+        z-index: 2;
+    }
+}

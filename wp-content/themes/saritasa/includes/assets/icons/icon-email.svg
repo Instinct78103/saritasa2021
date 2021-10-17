@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>5F6899D9-0E24-4933-B75C-923ADD316431</title>
+    <defs>
+        <path d="M21.9973,7.9741 C21.9973,7.9831 22.0003,7.9921 22.0003,8.0001 L22.0003,8.0001 L22.0003,17.0001 C22.0003,18.1031 21.1033,19.0001 20.0003,19.0001 L20.0003,19.0001 L4.0003,19.0001 C2.8973,19.0001 2.0003,18.1031 2.0003,17.0001 L2.0003,17.0001 L2.0003,8.0001 L2.0003,8.0001 L2.0033,7.9741 L11.4723,13.8501 C11.6343,13.9501 11.8173,14.0001 12.0003,14.0001 C12.1833,14.0001 12.3653,13.9501 12.5273,13.8501 L12.5273,13.8501 Z M20,6.0007 C20.352,6.0007 20.678,6.0997 20.965,6.2597 L20.965,6.2597 L12,11.8237 L3.035,6.2597 C3.322,6.0997 3.648,6.0007 4,6.0007 L4,6.0007 Z" id="path-1"></path>
+    </defs>
+    <g id="Element-Sheet-" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Element-Sheet---Saritasa-Web-2019" transform="translate(-2920.000000, -1196.000000)">
+            <g id="Graphic-Elements" transform="translate(2751.000000, 801.000000)">
+                <g id="Icon/email" transform="translate(169.000000, 395.000000)">
+                    <rect id="24px-bounding-box" x="0" y="0" width="24" height="24"></rect>
+                    <mask id="mask-2" fill="white">
+                        <use xlink:href="#path-1"></use>
+                    </mask>
+                    <g id="Mask"></g>
+                    <g id="Group" mask="url(#mask-2)" fill="#FFFFFF">
+                        <g id="Color/White">
+                            <rect id="Base" x="0" y="0" width="24" height="24"></rect>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

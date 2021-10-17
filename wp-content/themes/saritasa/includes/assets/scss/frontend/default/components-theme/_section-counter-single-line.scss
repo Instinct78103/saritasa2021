@@ -1,0 +1,86 @@
+#section-counter {
+    background-color: #fff;
+    box-shadow: 0 10px 50px rgba(0, 0, 0, .08), 0 13px 45px rgba(0, 0, 0, .08);
+    width: 90%;
+    border-radius: 15px;
+    margin: -40px auto 4%;
+    max-width: 1440px;
+
+    @media (min-width: 1000px) {
+        padding: 2%
+    }
+
+    @media (max-width: 999px) {
+        padding: 6%;
+    }
+
+    @media (max-width: 321px) {
+        width: 300px;
+    }
+
+    > .span_12 {
+        width: 100%;
+        max-width: none;
+    }
+
+    .wpb_wrapper {
+        display: flex;
+        flex-flow: row wrap;
+
+        > .iwithtext {
+            @media(min-width: 1000px) {
+                width: 25%;
+            }
+
+            @media(max-width: 999px) {
+                width: 50%;
+
+                &:first-child, &:nth-child(2) {
+                    margin-bottom: 6%;
+                }
+            }
+        }
+    }
+
+    h3 {
+        @media(max-width: 1100px) {
+            @include font-avenir-theme(600, 39px, 53px);
+        }
+
+        @media(min-width: 1101px) {
+            @include font-avenir-theme(600, 48px, 66px);
+        }
+    }
+
+    p {
+        @media(max-width: 1100px) {
+            @include font-avenir-theme(600, 15px, 20px);
+        }
+
+        @media(min-width: 1101px) {
+            @include font-avenir-theme(600, 18px, 25px);
+        }
+    }
+
+    &.blue {
+        h3 {
+            @media(max-width: 1100px) {
+                @include font-avenir-matisse(600, 39px, 53px);
+            }
+
+            @media(min-width: 1101px) {
+                @include font-avenir-matisse(600, 48px, 66px);
+            }
+        }
+
+        p {
+            @media(max-width: 1100px) {
+                @include font-avenir-matisse(600, 15px, 20px);
+            }
+
+            @media(min-width: 1101px) {
+                @include font-avenir-matisse(600, 18px, 25px);
+            }
+        }
+    }
+}

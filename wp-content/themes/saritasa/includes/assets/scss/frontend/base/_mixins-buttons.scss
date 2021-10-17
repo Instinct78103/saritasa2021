@@ -1,0 +1,209 @@
+@mixin button($main: (), $hover: (), $active: (), $disabled: ()) {
+
+    $main: map-merge((
+        cursor: pointer,
+        border: 1px solid $color-theme,
+        border-radius: 50px,
+        background-color: #fff,
+        text-align: center,
+        text-transform: none,
+        width: 100%,
+        padding: 10px,
+        color: $color-theme,
+        font-size: 16px,
+        font-family: $font-avenir,
+        font-weight: normal,
+        transition: .3s
+    ), $main);
+
+    $hover: map-merge((
+        color: map_get($main, background-color),
+        border-color: map_get($main, color),
+        background-color: map_get($main, color)
+    ), $hover);
+
+    $disabled: map-merge((
+        opacity: 0.5,
+        cursor: default
+    ), $disabled);
+
+    @each $main-name, $main-value in $main {
+        @if $main-value {
+            #{$main-name}: $main-value;
+        }
+    }
+
+    &:hover {
+        @each $hover-name, $hover-value in $hover {
+            #{$hover-name}: $hover-value;
+        }
+    }
+
+    &:active, &.active {
+        @each $active-name, $active-value in map-merge($hover, $active) {
+            #{$active-name}: $active-value;
+        }
+    }
+
+    &[disabled], &:disabled, &.disabled {
+        @each $disabled-name, $disabled-value in $disabled {
+            #{$disabled-name}: $disabled-value;
+        }
+
+        &:hover {
+            color: map_get($main, color);
+            background-color: map_get($main, background-color);
+        }
+    }
+}
+
+@mixin button-filled($main: (), $hover: (), $active: (), $disabled: ()) {
+
+    $main: map-merge((
+        cursor: pointer,
+        display: inline-block,
+        border: 1px solid $color-theme,
+        border-radius: 50px,
+        background-color: $color-theme,
+        text-align: center,
+        text-transform: none,
+        width: 100%,
+        padding: 10px,
+        color: #fff,
+        font-size: 16px,
+        font-family: $font-avenir,
+        font-weight: normal,
+        transition: .3s
+    ), $main);
+
+    $hover: map-merge((
+        border-color: darken(map_get($main, background-color), 10%),
+        background-color: darken(map_get($main, background-color), 10%)
+    ), $hover);
+
+    $disabled: map-merge((
+        opacity: 0.5,
+        cursor: default
+    ), $disabled);
+
+    @each $main-name, $main-value in $main {
+        @if $main-value {
+            #{$main-name}: $main-value;
+        }
+    }
+
+    &:hover {
+        @each $hover-name, $hover-value in $hover {
+            #{$hover-name}: $hover-value;
+        }
+    }
+
+    &:active, &.active {
+        @each $active-name, $active-value in map-merge($hover, $active) {
+            #{$active-name}: $active-value;
+        }
+    }
+
+    &[disabled], &:disabled, &.disabled {
+        @each $disabled-name, $disabled-value in $disabled {
+            #{$disabled-name}: $disabled-value;
+        }
+
+        &:hover {
+            background-color: map_get($main, background-color);
+        }
+    }
+}
+
+@mixin button-link($main: (), $hover: (), $active: (), $disabled: ()) {
+
+    $main: map-merge((
+        cursor: pointer,
+        display: inline-block,
+        border: none,
+        background: none,
+        padding: 0,
+        color: $color-atoll,
+        font-size: 16px,
+        font-family: $font-avenir,
+        font-weight: normal
+    ), $main);
+
+    $hover: map-merge((
+        //color: #000,
+    ), $hover);
+
+    $active: map-merge((
+        //text-decoration: underline
+    ), $active);
+
+    $disabled: map-merge((
+        opacity: 0.5,
+        cursor: default
+    ), $disabled);
+
+    @each $main-name, $main-value in $main {
+        @if $main-value {
+            #{$main-name}: $main-value;
+        }
+    }
+
+    &:hover {
+        @each $hover-name, $hover-value in $hover {
+            #{$hover-name}: $hover-value;
+        }
+    }
+
+    &:active, &.active {
+        @each $active-name, $active-value in $active {
+            #{$active-name}: $active-value;
+        }
+    }
+
+    &[disabled], &:disabled, &.disabled {
+        @each $disabled-name, $disabled-value in $disabled {
+            #{$disabled-name}: $disabled-value;
+        }
+    }
+}
+
+@mixin button-grey($main: (), $hover: (), $active: (), $disabled: ()) {
+
+    $main: map-merge((
+        color: $color-big-stone,
+        border: 1px solid $color-pumice,
+        background-color: #fff,
+        font-weight: 800
+    ), $main);
+
+    $hover: map-merge((
+        background-color: $color-theme,
+        border-color: $color-theme
+    ), $hover);
+
+    @include button($main, $hover, $active, $disabled);
+}
+
+@mixin button-matisse($main: (), $hover: (), $active: (), $disabled: ()) {
+
+    $main: map-merge((
+        color: $color-matisse,
+        border: 1px solid $color-matisse,
+        background-color: #fff,
+        font-weight: 900
+    ), $main);
+
+    @include button($main, $hover, $active, $disabled);
+}
+
+@mixin button-matisse-filled($main: (), $hover: (), $active: (), $disabled: ()) {
+
+    $main: map-merge((
+        color: #fff,
+        border: 1px solid $color-matisse,
+        background-color: $color-matisse,
+        font-weight: 900
+    ), $main);
+
+    @include button-filled($main, $hover, $active, $disabled);
+}

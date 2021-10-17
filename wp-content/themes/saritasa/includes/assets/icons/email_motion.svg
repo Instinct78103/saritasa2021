@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="56px" height="56px" viewBox="0 0 56 56" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>6E63B457-2F64-464D-BBDA-E991BB84C08A</title>
+    <defs>
+        <path d="M55.6985018,0 L55.6985018,26.6449729 L22.5285804,26.649712 L22.5413358,5.28591243 L22.5210284,0 L55.6985018,0 Z M54.2378667,4.42443346 L39.1153681,13.8774672 L23.9854222,4.4872779 L23.9860444,25.2601668 L54.2384889,25.2601668 L54.2378667,4.42443346 Z M19.9867812,14.800448 L19.9867812,16.0588749 L13.3245208,16.0588749 L13.3245208,14.800448 L19.9867812,14.800448 Z M54.2378667,1.45954457 L23.9854222,1.45954457 L23.9854222,2.51856679 L39.1122667,11.9732335 L54.2378667,2.51918901 L54.2378667,1.45954457 Z M19.9867812,9.80375266 L19.9867812,11.0621796 L0,11.0621796 L0,9.80375266 L19.9867812,9.80375266 Z M19.9867812,4.80705735 L19.9867812,6.06548432 L6.66226041,6.06548432 L6.66226041,4.80705735 L19.9867812,4.80705735 Z" id="path-1"></path>
+    </defs>
+    <g id="Element-Sheet-" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Element-Sheet---Saritasa-Web-2019" transform="translate(-2088.000000, -1286.000000)">
+            <g id="icon/email-outlined" transform="translate(2088.000000, 1286.000000)">
+                <rect id="24px-bounding-box" x="0" y="0" width="56" height="56"></rect>
+                <g id="Color" transform="translate(0.000000, 15.108989)">
+                    <mask id="mask-2" fill="white">
+                        <use xlink:href="#path-1"></use>
+                    </mask>
+                    <use id="Mask" fill="#979797" fill-rule="nonzero" xlink:href="#path-1"></use>
+                    <g id="Group" mask="url(#mask-2)">
+                        <g transform="translate(0.000000, -15.290762)" id="Color/Primary" fill="#F15924">
+                            <rect id="Base" x="0" y="0" width="56.6292135" height="56.6292135"></rect>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

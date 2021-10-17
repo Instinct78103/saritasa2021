@@ -1,0 +1,8 @@
+- name: sync-cdn-static
+  shell: |
+    /usr/bin/aws s3 sync {{ deploy_path }}/current/wp-content/plugins/ s3://"{{ s3bucket }}"/wp-content/plugins/
+    /usr/bin/aws s3 sync {{ deploy_path }}/current/wp-content/themes/ s3://{{ s3bucket }}/wp-content/themes/
+    /usr/bin/aws s3 sync {{ deploy_path }}/current/wp-content/uploads/ s3://{{ s3bucket }}/wp-content/uploads/
+  args:
+    chdir: "{{ ansistrano_release_path.stdout }}"
+  when: s3bucket is defined

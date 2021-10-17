@@ -1,0 +1,195 @@
+@import '../components/buttons';
+
+#section-featured-projects {
+    padding-bottom: 60px;
+
+    & > .col.span_12 {
+        width: 100%;
+        max-width: none;
+    }
+
+    h2 {
+        text-align: center;
+    }
+
+    .featured-projects {
+        display: flex;
+        flex-flow: row wrap;
+        border-top: 2px solid $color-theme;
+
+        &-item {
+            position: relative;
+            width: 25%;
+            padding: 3vw;
+            cursor: pointer;
+            transition: .3s;
+            aspect-ratio: 1 / 1;
+            display: flex;
+            align-items: center;
+
+            &:before,
+            &:after {
+                content: '';
+                z-index: 2;
+                position: absolute;
+                inset: 0;
+                margin: auto;
+                transition: .3s;
+                border-style: solid;
+                border-color: $color-theme;
+                opacity: 0;
+                visibility: hidden;
+            }
+
+            &:before {
+                width: calc(100% - 25px);
+                height: 0;
+                border-width: 0 1px;
+            }
+
+            &:after {
+                border-width: 1px 0;
+                width: 0;
+                height: 92%;
+            }
+
+            &:hover {
+                z-index: 1000;
+                box-shadow: 0 8px 20px #252525;
+                transition: .3s;
+
+                &:before,
+                &:after {
+                    opacity: 0.8;
+                    visibility: visible;
+                }
+
+                &:before {
+                    height: 92%;
+                }
+
+                &:after {
+                    width: calc(100% - 25px);
+                }
+
+                .overlay {
+                    visibility: visible
+                }
+
+                .category-icon {
+                    visibility: visible;
+                }
+
+                .featured-projects-meta {
+                    visibility: visible;
+                }
+            }
+
+            @include background-image-cover(null, (
+                background-color: #fff,
+                background-position: center top,
+            ));
+
+            @media (min-width: 768px) and (max-width: 1300px) {
+                padding: 2vw;
+            }
+
+            @media (min-width: 421px) and (max-width: 767px) {
+                width: 50%;
+                padding: 4vw;
+            }
+
+
+            @media (max-width: 420px) {
+                width: 100%;
+                padding: 8vw;
+            }
+
+            .overlay {
+                width: 100%;
+                height: 100%;
+                position: absolute;
+                top: 0;
+                left: 0;
+                background-color: #000;
+                opacity: .5;
+                z-index: 1;
+                visibility: hidden;
+            }
+
+            .category-icon {
+                display: none;
+                /**
+                According to design we had to get rid of the styles below
+                 */
+                //visibility: hidden;
+                //width: 45px;
+                //height: 45px;
+                //margin-bottom: 25px;
+                //align-items: center;
+                //justify-content: center;
+                //background-position: center;
+                //background-repeat: no-repeat;
+            }
+
+            .featured-projects-meta {
+                visibility: hidden;
+                z-index: 2;
+                position: relative;
+
+                h3 {
+                    @include font-avenir(#fff, 600, 40px, 48px);
+                    margin-bottom: 20px;
+
+                    @media (min-width: 1000px) and (max-width: 1300px) {
+                        font-size: 24px;
+                        line-height: 32px;
+                    }
+
+                    @media (min-width: 768px) and (max-width: 999px) {
+                        font-size: 3vw;
+                        line-height: 1.1;
+                    }
+
+                    @media (min-width: 421px) and (max-width: 767px) {
+                        font-size: 24px;
+                        line-height: 32px;
+                    }
+
+                    @media (max-width: 420px) {
+                        font-size: 32px;
+                        line-height: 1.2;
+                    }
+                }
+
+                p {
+                    @include font-avenir(#fff, 600, 20px, 28px);
+                    text-transform: capitalize;
+                }
+            }
+
+            a {
+                width: 100%;
+                height: 100%;
+                position: absolute;
+                top: 0;
+                left: 0;
+                z-index: 3;
+            }
+        }
+    }
+}
+
+.pagination {
+    text-align: center;
+    padding: 2% 0;
+
+    button,
+    a {
+        display: block;
+        margin: 0 auto;
+        max-width: 225px;
+        font-size: 18px;
+        font-weight: 700;
+    }
+}

@@ -1,0 +1,20 @@
+@import 'vc-toggle';
+
+#why-chose-us-toggles {
+
+    > .col.span_12 {
+        align-items: flex-start;
+    }
+
+    .vc_col-sm-6 {
+        padding: 1%;
+        background-color: #fff;
+        @include shadow;
+
+        &:last-child {
+            @media(max-width: 999px) {
+                margin-top: 2%;
+            }
+        }
+    }
+}

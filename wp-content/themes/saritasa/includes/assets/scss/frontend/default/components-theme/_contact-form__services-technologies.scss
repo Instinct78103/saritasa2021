@@ -1,0 +1,122 @@
+@import '../components/contact-form';
+
+#section-contact-form {
+    .col.span_12 {
+        display: flex;
+        align-items: flex-start;
+
+        @media(max-width: 999px) {
+            flex-direction: column;
+        }
+        @media(min-width: 1000px) {
+            flex-direction: row;
+        }
+
+        .contact-form,
+        .office-locations {
+            @include shadow;
+        }
+
+        .contact-form {
+            @media(max-width: 999px) {
+                margin-bottom: 24px;
+            }
+        }
+
+        .border {
+            display: block;
+            background-color: $color-theme;
+            height: 1px;
+            width: 100%;
+            margin: 3vw 0;
+        }
+
+        .office-locations {
+            background-color: #fff;
+            padding: 4% 3%;
+
+            .textwidget {
+                @media(max-width: 999px) {
+                    display: flex;
+                    flex-flow: row wrap;
+                    justify-content: center;
+                }
+
+                @media (max-width: 640px) {
+                    justify-content: space-evenly;
+                    flex-flow: column;
+                    align-items: center;
+                }
+
+                .contact-us {
+                    text-align: center;
+                }
+            }
+
+            h3 {
+                text-align: center;
+                @include font-avenir-big-stone(600, 24px, 33px);
+                width: 100%;
+            }
+
+            ul {
+                width: 100%;
+
+                li {
+                    @include font-avenir-big-stone(400, 18px, 32px);
+                    @media (max-width: 999px) {
+                        text-align: center;
+                    }
+                }
+            }
+
+            a {
+                @include font-avenir-atoll(600, 12px, 1);
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                border-radius: 100px;
+                border: 1px solid $color-atoll;
+                padding: 10px 0;
+
+                @media (max-width: 999px) {
+                    display: inline-flex;
+                    min-width: 250px;
+                }
+
+                @media(min-width: 1000px) {
+                    max-width: 250px;
+                }
+
+                &[href^=tel] {
+                    @media(min-width: 1000px) {
+                        margin: 12px auto 24px;
+                    }
+                    @media(max-width: 999px) {
+                        margin-right: 12px;
+                    }
+
+                    @media (max-width: 640px) {
+                        margin-right: 0;
+                        margin-bottom: 8px;
+                    }
+                }
+
+                &[href^=mail] {
+                    @media(min-width: 1000px) {
+                        margin: 0 auto;
+                    }
+                }
+
+                span {
+                    align-self: center;
+                }
+            }
+
+            .fa.fa-envelope:before, .fa.fa-phone:before {
+                background-color: $color-atoll;
+            }
+
+        }
+    }
+}

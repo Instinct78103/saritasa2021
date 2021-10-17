@@ -1,0 +1,182 @@
+@import '../base/index';
+
+@import '../components-theme/saritasa-logo-bg__home-and-services';
+@import '../components-theme/text-with-icon';
+@import '../components-theme/heading-w-lines';
+@import '../components-theme/getting-started-3-steps';
+@import '../components-theme/contact-form__services-technologies';
+@import '../components-theme/custom_owl_carousel';
+@import '../components-theme/section-2-carousels';
+@import '../components-theme/section-why-choose-us';
+@import '../components-theme/featured-projects';
+
+@import '../components-theme/section-counter-single-line';
+@import '../components-theme/nectar-video-box';
+@import '../components-theme/ready-to-start';
+
+
+.icon-bg {
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: right bottom;
+
+    @media(min-width: 1441px) {
+        background-position: right 25% bottom;
+    }
+}
+
+/**
+Pages slugs
+ */
+$subpages: (
+    'ios-development',
+    'android-development',
+    'apple-pay-integration',
+    'apple-watch-app-development',
+    'cross-platform',
+    'ecommerce',
+    'custom-crm-development',
+    'content-management-systems',
+    'virtual-reality',
+    'augmented-reality',
+    'aws-development-services'
+);
+
+@each $subpage in $subpages {
+    .#{$subpage} .icon-bg {
+        background-image: url(image_path('subpage__#{$subpage}.svg'));
+    }
+}
+
+#section-top {
+    p {
+        @include font-avenir-big-stone(600, 18px, 25px);
+    }
+
+    h1 {
+        @include font-avenir-theme(600, 54px, 74px);
+        margin-bottom: 20px;
+        @media (max-width: 1100px) {
+            @include font-avenir-theme(600, 43px, 50px);
+        }
+        @media (min-width: 1441px) {
+            margin-bottom: 0;
+        }
+    }
+
+    & > .span_12 {
+        max-width: none;
+        position: relative;
+        padding-top: 4vw;
+
+        @media(min-width: 1100px) and (max-width: 1440px) {
+            /**
+            according to design
+             */
+            width: 85vw;
+        }
+
+        @media(min-width: 1441px) {
+            padding-top: 2vw;
+        }
+    }
+}
+
+#section-our-services-sub {
+    & > .span_12 {
+        align-items: flex-start;
+
+        @media(min-width: 1100px) and (max-width: 1440px) {
+            /**
+            according to design
+             */
+            width: 85vw;
+        }
+    }
+
+    .subpage-desc {
+        margin-bottom: 20px;
+
+        p {
+            @include font-avenir-big-stone(400, 18px, 25px);
+        }
+    }
+
+    .our-services-title {
+        position: relative;
+        background: linear-gradient(43.69deg, #e43e00 0, #f68d1e 100%) no-repeat;
+        @include shadow;
+        border-radius: 20px;
+        padding: 3vw;
+
+        @media(min-width: 1000px) {
+            width: calc(100% + 6vw);
+        }
+
+        @media(max-width: 999px) {
+            padding: 6%;
+            margin-bottom: 25px;
+        }
+
+        h2 {
+            @include font-avenir-white(600, 48px, 1.1);
+            @media (max-width: 1240px) {
+                font-size: 38px;
+            }
+        }
+
+        p {
+            @include font-avenir-white(400, 24px, 33px);
+            margin-bottom: 20px;
+            @media (max-width: 1240px) {
+                font-size: 19px;
+                line-height: 25px;
+            }
+        }
+
+        button, a {
+            border-width: 0;
+            display: inline-block;
+            @include font-avenir-atoll(600, 18px, 25px);
+            text-align: center;
+            border-radius: 100px;
+            background-color: #fff;
+            padding: 20px 60px;
+            cursor: pointer;
+            width: 100%;
+        }
+    }
+
+    .our-services-list {
+        background-color: #fff;
+        box-shadow: 0 1px 18px 0 rgba(0, 0, 0, 0.12);
+        border-radius: 20px;
+        padding: 3% 6vw;
+
+        .wpb_wrapper {
+            display: grid;
+            grid-column-gap: 40px;
+            grid-row-gap: 20px;
+            justify-content: center;
+            grid-template-columns: repeat(2, 1fr);
+
+            @media(max-width: 480px) {
+                grid-template-columns: 1fr;
+            }
+
+            .iwithtext {
+                padding: 2%;
+                grid-template-columns: repeat(2, fit-content(100%));
+            }
+        }
+    }
+}
+
+.bottom-section-subpages {
+    border-top: 1px solid $color-theme;
+
+    > .col.span_12 {
+        max-width: none;
+        width: 100%;
+    }
+}

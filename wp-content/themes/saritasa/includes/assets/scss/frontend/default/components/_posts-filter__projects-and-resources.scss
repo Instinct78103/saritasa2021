@@ -1,0 +1,132 @@
+/**
+These styles are used on both pages
+(Projects and Resources)
+
+1. .posts-filter
+2. .posts-container
+3. .pagination
+
+*/
+
+.posts-filter {
+    padding-top: 40px;
+    background-color: #fff;
+    border-bottom: 1px solid $color-theme;
+
+    .main-filter,
+    .sub-filter {
+        display: flex;
+        flex-flow: row wrap;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .main-filter {
+        li {
+            display: inline-flex;
+            margin-bottom: 20px;
+            margin-right: 10px;
+
+            &:last-child,
+            &:nth-last-child(2) {
+                margin-right: 0;
+            }
+
+            &:last-child {
+                margin-left: 10px;
+            }
+
+            .toggle-list {
+                @include font-avenir-white(600, 16px, 22px);
+                display: flex;
+                align-items: center;
+                margin-left: 40px;
+                background-color: #fff;
+                border: 1px solid $color-atoll;
+                border-radius: 25px;
+                text-align: center;
+                padding: 10px 15px;
+                color: $color-atoll;
+
+                svg {
+                    margin-right: 6px;
+                }
+
+                &:not(.active) {
+                    svg {
+                        path {
+                            fill: $color-atoll;
+                        }
+                    }
+                }
+
+                &.active {
+                    background-color: $color-atoll;
+                    color: #fff;
+
+                    svg {
+                        path {
+                            fill: #fff;
+                        }
+                    }
+                }
+
+                &:hover {
+                    background-color: $color-atoll;
+                    color: #fff;
+
+                    svg {
+                        path {
+                            fill: #fff;
+                        }
+                    }
+                }
+
+                @media(max-width: 1329px) {
+                    margin-left: 0;
+                }
+            }
+
+            &:first-child {
+                min-width: 130px;
+            }
+
+            &:not(.projects-filter-switcher) {
+                min-width: 100px;
+            }
+        }
+    }
+
+    .sub-filter {
+        margin-bottom: 20px;
+
+        li {
+            button {
+                @include font-avenir-atoll(400, 12px, 16px);
+            }
+        }
+    }
+
+    .toggle-list {
+        cursor: pointer;
+        white-space: nowrap;
+    }
+
+}
+
+.posts-container {
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 2% 0;
+}
+
+.pagination {
+    text-align: center;
+    padding-bottom: 2%;
+
+    button {
+        max-width: 225px;
+        font-size: 18px;
+        font-weight: 700;
+    }
+}

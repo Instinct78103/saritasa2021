@@ -1,0 +1,11 @@
+.sar-icon {
+    @include icon;
+
+    &-default {
+        @include icon-sized(50px, 50px);
+    }
+
+    &-mob-dev {
+        @include icon-sized(34px, 40px, icon_path('mob-dev.svg'));
+    }
+}

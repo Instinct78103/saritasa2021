@@ -1,0 +1,35 @@
+$fa: FontAwesome;
+@font-face {
+    font-family: $fa;
+    src: url(font_path('fa-solid-900.ttf')) format('truetype');
+    font-display: swap;
+}
+
+@font-face {
+    font-family: $fa;
+    src:
+        url(font_path('fontawesome.woff2')) format('woff2'),
+        url(font_path('fontawesome.woff')) format('woff'),
+        url(font_path('fontawesome.ttf')) format('truetype');
+    font-display: swap;
+}
+
+$font-avenir: 'Avenir', sans-serif;
+
+$avenir: (
+    400: 'Avenir-Book',
+    600: 'Avenir-Heavy',
+);
+
+@each $fontWeight, $fontFamily in $avenir {
+    @font-face {
+        font-family: Avenir;
+        font-weight: $fontWeight;
+        font-display: swap;
+        src:
+            local($fontFamily),
+            url(font_path('Avenir/#{$fontFamily}.woff2')),
+            url(font_path('Avenir/#{$fontFamily}.woff')),
+            url(font_path('Avenir/#{$fontFamily}.ttf'));
+    }
+}

@@ -1,0 +1,265 @@
+@import '../components/contact-form';
+
+.sar-popup-overlay {
+    position: fixed;
+    background-color: rgba(79, 79, 79, .8);
+    height: 100%;
+    width: 100%;
+    display: flex;
+    visibility: hidden;
+    pointer-events: none;
+    justify-content: center;
+
+    &.active {
+        overflow-y: scroll;
+        visibility: visible;
+        pointer-events: all;
+        top: 0;
+        z-index: 999;
+        @media(min-width: 1000px) {
+            align-items: center;
+        }
+    }
+}
+
+.sar-popup-form {
+    margin-top: 51px;
+
+    @media(min-width: 2500px) {
+        width: 1024px;
+    }
+
+    @media(min-width: 1100px) {
+        width: 760px;
+    }
+
+    @media(min-width: 768px) and (max-width: 1099px) {
+        width: 640px;
+    }
+
+    @media(max-width: 767px) and (min-width: 322px) {
+        width: 90%;
+    }
+
+    @media(max-width: 321px) {
+        width: 288px;
+    }
+
+}
+
+.form-header {
+    background-image: url(image_path('popup-bg.webp'));
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    position: relative;
+
+    @media (min-width: 2500px) {
+        padding: 60px 16px;
+    }
+    @media(min-width: 768px) {
+        padding: 40px 16px;
+    }
+    @media(max-width: 767px) {
+        padding: 40px 16px 30px 16px;
+    }
+
+    .btn-close {
+        position: absolute;
+        font-size: 30px;
+        color: #fff;
+        top: 20px;
+        right: 20px;
+
+        @media(max-width: 767px) {
+            top: 10px;
+            right: 10px;
+        }
+    }
+
+    h1 {
+        @include font-avenir-white(600, 28px, 38px);
+        text-align: center;
+
+        @media(min-width: 1100px) and (max-width: 1440px) {
+            font-size: 28px;
+            line-height: 38px;
+        }
+
+        @media(max-width: 1099px) {
+            font-size: 24px;
+            line-height: 33px;
+        }
+    }
+
+    p {
+        @include font-avenir-white(400, 14px, 19px);
+        padding-bottom: 0;
+        text-align: center;
+
+        @media (min-width: 322px) and (max-width: 1440px) {
+            font-size: 14px;
+            line-height: 19px;
+        }
+
+        @media (max-width: 321px) {
+            width: 60%;
+            margin: 0 auto;
+        }
+    }
+}
+
+.form-footer {
+    padding: 4% 8%;
+    background-color: #2E2E2E;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+
+    @media(min-width: 2500px) {
+        padding: 45px 100px;
+    }
+
+
+    @media(max-width: 321px) {
+        padding: 40px 4%;
+    }
+
+    h3 {
+        @include font-avenir-white(600, 18px, 22px);
+        margin-bottom: 8px;
+        width: 100%;
+        text-align: left;
+        @media(max-width: 1099px) {
+            text-align: center;
+        }
+    }
+
+    .textwidget {
+        display: flex;
+        justify-content: space-between;
+
+        @media(max-width: 1099px) {
+            flex-direction: column;
+        }
+    }
+
+    .locations {
+
+        @media(min-width: 2500px) {
+            width: 60%;
+        }
+        @media(min-width: 1100px) {
+            width: 50%;
+        }
+
+        @media(max-width: 1099px) {
+            width: 100%;
+            margin-bottom: 24px;
+        }
+
+        ul {
+            display: flex;
+            flex-flow: row wrap;
+            margin-bottom: 0;
+            margin-left: 0;
+            @media (max-width: 1099px) and (min-width: 768px) {
+                justify-content: space-between;
+            }
+            @media (max-width: 767px) {
+                justify-content: center;
+            }
+
+            li {
+                color: #fff;
+                letter-spacing: 0;
+                margin-right: 24px;
+                list-style: disc inside;
+                @include font-avenir-white(400, 12px, 16px);
+
+                @media (min-width: 2500px) {
+                    @include font-avenir-white(400, 16px, 22px);
+                    margin-bottom: 8px;
+                }
+                @media (min-width: 1100px) {
+                    @include font-avenir-white(400, 12px, 16px);
+                    margin-bottom: 4px;
+                }
+
+                @media (max-width: 1099px) {
+                    margin-right: 0;
+                }
+
+                @media (max-width: 767px) {
+                    margin-right: 8px;
+                }
+                @media (max-width: 321px) {
+                    margin-right: 6px;
+                    margin-bottom: 8px;
+                }
+
+                &:last-child {
+                    margin-right: 0;
+                }
+            }
+        }
+    }
+
+    .contact-us {
+        display: flex;
+        flex-flow: row wrap;
+
+        @media(min-width: 2500px) {
+            width: 40%;
+            justify-content: space-between
+        }
+        @media(min-width: 1100px) {
+            justify-content: left;
+            width: 50%;
+        }
+
+        @media(max-width: 1099px) {
+            width: 100%;
+            text-align: center;
+            justify-content: space-between;
+        }
+
+        a {
+            @include font-avenir-white(400, 12px, 16px);
+            display: flex;
+            border-radius: 25px !important;
+            color: #fff;
+            border: 1px solid #fff;
+            padding: 8px 15px;
+            margin-top: 4px;
+            margin-bottom: 0;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            min-height: 40px;
+
+            @media (max-width: 321px){
+                width: 100%;
+            }
+
+            @media(max-width: 1099px) {
+                width: calc(50% - 12px);
+            }
+
+            @media(max-width: 767px) {
+                margin: 8px auto 0;
+                min-width: 165px;
+            }
+
+            &[href *= tel] {
+                @media(min-width: 2500px) {
+                    margin-right: 18px;
+                }
+                @media(min-width: 1100px) {
+                    margin-right: 8px;
+                }
+            }
+        }
+    }
+}

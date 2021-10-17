@@ -1,0 +1,124 @@
+.subscription {
+    margin-top: 60px;
+    padding-bottom: 60px;
+
+    &-form {
+        max-width: 768px;
+        margin: 0 auto;
+        padding: 40px 85px;
+        border-radius: 5px;
+        box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+
+        @media (max-width: 767px) {
+            padding: 25px;
+        }
+    }
+
+    .description {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        @media (max-width: 480px) {
+            flex-direction: column;
+        }
+
+        &-icon {
+            @include background-image-contain(icon_path('email_motion.svg'));
+            height: 60px;
+            width: 90px;
+            margin-right: 10px;
+        }
+
+        &-text {
+            @include font-avenir-big-stone(400, 18px, 25px);
+            @media (max-width: 480px) {
+                text-align: center;
+            }
+
+            .headline {
+                font-weight: 700;
+            }
+        }
+    }
+
+    .fields {
+        text-align: left;
+        margin-top: 50px;
+
+        @media (max-width: 767px) {
+            margin-top: 15px;
+        }
+
+        .yikes-easy-mc {
+
+            &-form {
+
+                > label {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: flex-start;
+                    margin: 0;
+
+                    > span {
+                        @include font-avenir-big-stone(600, 18px);
+                    }
+
+                    > input[type='email'] {
+                        @include font-avenir-big-stone(400, 18px);
+                        border: 2px solid rgba(51, 51, 51, .1);
+                        background-color: #f1f1f1;
+                        outline: none;
+                        width: 100%;
+                        padding: 0.5em;
+                        border-radius: 4px;
+
+                        &:focus,
+                        &:active {
+                            border: 2px solid $color-theme;
+                        }
+                    }
+                }
+
+                > button {
+                    border-width: 0;
+                    @include font-avenir-white(600, 18px, 1);
+                    text-align: center;
+                    text-transform: uppercase;
+                    background-color: $color-theme;
+                    border-radius: 50px;
+                    width: 100%;
+                    padding: 20px 5px;
+                    margin-top: 40px;
+                    margin-bottom: 0;
+
+                    @media (max-width: 767px) {
+                        margin-top: 15px;
+                    }
+                }
+            }
+
+            &-error-message,
+            &-success-message {
+                @include font-avenir-big-stone(400, 18px);
+                padding: 0;
+                margin-bottom: 15px;
+                border-radius: 5px;
+
+                @media (min-width: 768px) {
+                    margin-top: -30px;
+                }
+
+                @media (max-width: 767px) {
+                    text-align: center;
+                }
+            }
+        }
+
+        .edit-link {
+            margin-top: 10px;
+            @include font-avenir-big-stone(400, 12px);
+            text-align: right;
+        }
+    }
+}

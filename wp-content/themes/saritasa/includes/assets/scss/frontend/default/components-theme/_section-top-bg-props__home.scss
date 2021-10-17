@@ -1,0 +1,85 @@
+#section-top {
+
+    & > .span_12 {
+        @media(min-width: 1100px) and (max-width: 1440px) {
+            /**
+            according to design
+             */
+            width: 85vw;
+        }
+
+        @media (max-width: 480px) {
+            padding-bottom: 35vw;
+        }
+
+        @media (min-width: 481px) and (max-width: 1299px) {
+            padding-bottom: 32vw;
+        }
+
+        @media (min-width: 1300px) and (max-width: 1440px) {
+            padding-bottom: 30vw;
+        }
+
+        @media(min-width: 1441px) {
+            padding-top: 2vw;
+            padding-bottom: 28vw;
+        }
+
+        @media(min-width: 2000px) {
+            padding-bottom: 20vw;
+        }
+
+        @media(min-width: 2500px) {
+            padding-bottom: 16vw;
+        }
+
+        @media(min-width: 2800px) {
+            padding-bottom: 13vw;
+        }
+    }
+
+    .row-bg-wrap {
+        .row-bg {
+            background-image: url($images-path + 'Home_BG.webp');
+            @media(max-width: 320px) {
+                background-position: right -24vw bottom 2vw;
+                background-size: 120vw;
+                opacity: 0.4;
+            }
+
+            @media(min-width: 321px) and (max-width: 767px) {
+                background-position: right -20vw bottom 2vw;
+                background-size: 110vw;
+            }
+
+            @media (min-width: 768px) and (max-width: 999px) {
+                background-position: right -22vw bottom -2vw;
+                background-size: 115vw;
+            }
+
+            @media (min-width: 1000px) and (max-width: 1440px) {
+                background-position: right -22vw bottom -3vw;
+                background-size: 115vw;
+            }
+
+            @media(min-width: 1441px) {
+                background-position: center top 6vw;
+                background-size: 92vw;
+            }
+
+            @media(min-width: 2000px) {
+                background-position: right 5vw top 3vw;
+                background-size: 80vw;
+            }
+
+            @media(min-width: 2500px) {
+                background-position: right 5vw top 2vw;
+                background-size: 65vw;
+            }
+
+            @media(min-width: 2800px) {
+                background-size: 56vw;
+            }
+        }
+    }
+}

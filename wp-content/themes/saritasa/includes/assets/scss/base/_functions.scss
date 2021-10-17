@@ -1,0 +1,19 @@
+@function font_path($font-name) {
+    @return $fonts-path + $font-name;
+}
+
+@function icon_path($icon-name) {
+    @return $icons-path + $icon-name;
+}
+
+@function image_path($image-name) {
+    @return $images-path + $image-name;
+}
+
+@function breakpoint_min($screen) {
+    @return map_get($media-min, $screen);
+}
+
+@function breakpoint_max($screen) {
+    @return map_get($media-max, $screen);
+}

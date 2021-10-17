@@ -1,0 +1,35 @@
+@import '../base/index';
+@import '../components-theme/popup_contact-form';
+@import '../components/buttons';
+
+@include site-bg();
+
+#error-404 {
+    text-align: center;
+    padding: 10% 0;
+    position: relative;
+    z-index: 10;
+    width: 100%;
+
+    h1 {
+        @include font-avenir-big-stone(600, 220px, 1);
+
+        @media(max-width: 480px) {
+            font-size: 150px;
+        }
+    }
+
+    h2 {
+        @include font-avenir-big-stone(600, 54px, 1);
+
+        @media(max-width: 480px) {
+            font-size: 33px;
+        }
+    }
+
+    .nectar-button {
+        display: block;
+        margin: 0 auto;
+        max-width: 200px;
+    }
+}

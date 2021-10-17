@@ -1,0 +1,50 @@
+@import '../components-theme/popup_youtube';
+@import '../components/videobox';
+
+.video-box {
+
+    @media (max-width: 480px) {
+        height: 80vw;
+    }
+
+    @media (min-width: 481px) and (max-width: 999px) {
+        height: 65vw;
+    }
+
+    @media (min-width: 1000px) {
+        height: 40vw;
+    }
+
+    @media (min-width: 1441px) and (max-width: 1600px) {
+        height: 35vw;
+    }
+
+    @media (min-width: 1601px) and (max-width: 2000px) {
+        height: 33vw;
+    }
+
+    @media (min-width: 2001px) {
+        height: 27vw;
+    }
+
+    @media (min-width: 2500px) {
+        height: 30vw;
+    }
+
+    .play-button {
+        @media (max-width: 480px) {
+            padding: 20px 10px;
+        }
+
+        @media (max-width: 320px) {
+            max-width: 300px;
+        }
+
+        p {
+            @include font-avenir-theme(400, 24px, 1.2);
+            @media(max-width: 767px) {
+                font-size: 16px;
+            }
+        }
+    }
+}

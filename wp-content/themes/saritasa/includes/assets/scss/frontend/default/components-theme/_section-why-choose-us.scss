@@ -1,0 +1,57 @@
+#section-why-choose-us {
+    background-color: #fff;
+    padding-bottom: 120px;
+
+    .col.span_12 {
+        display: flex;
+        justify-content: space-between;
+        flex-flow: row wrap;
+    }
+
+    .vc_col-sm-3 {
+        @media (min-width: 1000px) {
+            width: calc(100% * 3 / 12 - 3%);
+            margin-left: 0;
+        }
+
+        @media (min-width: 481px) and (max-width: 999px) {
+            width: 48%;
+
+            &:nth-child(n + 3) {
+                margin-top: 5vw;
+            }
+        }
+
+        @media (max-width: 480px) {
+            width: 100%;
+        }
+
+        &:not(:first-child):not(:last-child) {
+            @media(max-width: 480px) {
+                margin-top: 5vw;
+            }
+        }
+    }
+
+    .iwithtext.icon-pos-top {
+        justify-items: left;
+        @media(max-width: 999px) {
+            justify-items: center;
+        }
+    }
+
+    h4 {
+        @include font-avenir-theme(400, 24px, 33px);
+        @media(max-width: 999px) {
+            text-align: center;
+        }
+    }
+
+    p {
+        @include font-avenir-big-stone(400, 16px, 22px);
+        text-align: left;
+        @media(max-width: 999px) {
+            text-align: center;
+        }
+    }
+}

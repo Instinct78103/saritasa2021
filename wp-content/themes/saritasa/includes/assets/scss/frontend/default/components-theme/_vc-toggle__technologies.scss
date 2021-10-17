@@ -1,0 +1,151 @@
+.vc_toggle {
+    transition: all 0.2s 0.2s;
+    box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.12);
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
+
+    &_content {
+        padding-left: 60px;
+        padding-right: 60px;
+        @include font-avenir($color-big-stone, 400, 18px, 25px);
+        max-height: 0;
+        overflow: hidden;
+        transition: all 0.2s;
+        background-color: #fff;
+
+        @media (max-width: 480px) {
+            padding-left: 30px;
+            padding-right: 30px;
+        }
+
+        ul {
+            margin-top: 1.5em;
+            margin-left: 30px;
+
+            * {
+                list-style: disc;
+            }
+        }
+    }
+
+    .vc_toggle_title {
+        background-color: #fff;
+        border-top-left-radius: 0;
+        border-top-right-radius: 0;
+        transition: all 0.2s;
+
+        h4 {
+            display: flex;
+            padding: 14px 66px 14px 14px;
+            @include font-avenir($color-theme, 600, 24px, 33px);
+            cursor: pointer;
+            position: relative;
+            align-items: center;
+
+            @media(max-width: 480px) {
+                font-size: 22px;
+            }
+
+            &:before {
+                content: '';
+                height: 32px;
+                min-width: 32px;
+                display: inline-block;
+                margin-right: 14px;
+                background-size: contain;
+                background-repeat: no-repeat;
+            }
+
+            &:after {
+                content: '\f067';
+                position: absolute;
+                right: 24px;
+                font-family: $fa;
+                color: #2E2E2E;
+                font-size: 15px;
+            }
+        }
+    }
+
+    &.open {
+        margin-top: 14px;
+        margin-bottom: 14px;
+        border-radius: 6px;
+        transition: all 0.2s 0.2s;
+
+        &.experience {
+            @media(max-width: 999px) {
+                margin-top: 0;
+            }
+        }
+
+        &.prof-scalable-teams {
+            @media(max-width: 999px) {
+                margin-top: 14px;
+            }
+        }
+
+        &.secure-production-environment {
+            @media(min-width: 1000px) {
+                margin-bottom: 0;
+            }
+        }
+
+        &.automation {
+            margin-bottom: 0;
+        }
+
+        .vc_toggle_title {
+            border-top-left-radius: 6px;
+            border-top-right-radius: 6px;
+            transition: all 0.2s;
+        }
+
+        .vc_toggle_content {
+            border-bottom-left-radius: 6px;
+            border-bottom-right-radius: 6px;
+            transition: all 0.2s;
+        }
+
+        h4 {
+            &:after {
+                content: '\f068';
+            }
+        }
+
+        &:first-child {
+            margin-top: 0;
+        }
+
+        .vc_toggle_content {
+            max-height: 1200px;
+            padding-bottom: 14px;
+            transition: all 0.2s;
+        }
+    }
+
+    $icons: (
+        'experience',
+        'transparency',
+        'communication-collaboration',
+        'quality-code',
+        'secure-production-environment',
+        'prof-scalable-teams',
+        'local-accountable',
+        'attention-to-detail',
+        'source-code-ownership',
+        'automation',
+        'consultation',
+        'code-file',
+        'framework',
+        'maintenance'
+    );
+
+    @each $icon in $icons {
+        &.#{$icon} {
+            h4:before {
+                background-image: url(icon_path('#{$icon}.svg'));
+            }
+        }
+    }
+}

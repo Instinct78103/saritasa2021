@@ -1,0 +1,29 @@
+.heading-w-lines {
+    transform: translateY(-50%);
+    position: relative;
+    width: fit-content;
+    margin: 0 auto 20px;
+    padding: 0 10%;
+
+    @media(max-width: 480px) {
+        padding: 0 12px;
+    }
+
+    &:before,
+    &:after {
+        content: '';
+        position: absolute;
+        height: 1px;
+        background-color: $color-theme;
+        width: 50vw;
+        top: 50%;
+    }
+
+    &:before {
+        right: 100%;
+    }
+
+    &:after {
+        left: 100%;
+    }
+}

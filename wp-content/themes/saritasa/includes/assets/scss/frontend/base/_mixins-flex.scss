@@ -1,0 +1,57 @@
+@mixin flex($align: null, $justify: null, $main: ()) {
+    $default: (
+        display: flex
+    );
+
+    @if $align {
+        $default: map-merge($default, (align-items: $align));
+    }
+
+    @if $justify {
+        $default: map-merge($default, (justify-content: $justify));
+    }
+
+    @each $main-name, $main-value in map-merge($default, $main) {
+        @if $main-value {
+            #{$main-name}: $main-value;
+        }
+    }
+}
+
+@mixin flex-wrap($main: ()) {
+    @include flex(null, null, map-merge((flex-wrap: wrap), $main));
+}
+
+@mixin flex-center($main: ()) {
+    @include flex(center, center, $main);
+}
+
+@mixin flex-between($main: ()) {
+    @include flex(center, space-between, $main);
+}
+
+@mixin flex-between-start($main: ()) {
+    @include flex(flex-start, space-between, $main);
+}
+
+@mixin flex-between-end($main: ()) {
+    @include flex(flex-end, space-between, $main);
+}
+
+@mixin flex-between-stretch($main: ()) {
+    @include flex(stretch, space-between, $main);
+}
+
+@mixin flex-around($main: ()) {
+    @include flex(center, space-around, $main);
+}
+
+@mixin flex-start($main: ()) {
+    @include flex(center, flex-start, $main);
+}
+
+@mixin flex-end($main: ()) {
+    @include flex(center, flex-end, $main);
+}
+
+

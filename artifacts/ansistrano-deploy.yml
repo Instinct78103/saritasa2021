@@ -1,0 +1,18 @@
+---
+- name: deployment
+  hosts: all
+  vars:
+    ansistrano_keep_releases: 3
+    ansistrano_deploy_from: "{{ playbook_dir }}/.."
+    ansistrano_shared_files: ['wp-config.php']
+    ansistrano_shared_paths: ['wp-content/uploads']
+    ansistrano_deploy_to: "{{ deploy_path }}"
+    ansistrano_git_repo: "{{ deploy_repo }}"
+    ansistrano_git_branch: "{{ deploy_branch }}"
+    ansistrano_deploy_via: "git"
+    ansistrano_git_depth: 1
+    ansistrano_after_symlink_tasks_file: "{{ playbook_dir }}/ansistrano-post-deploy.yml"
+
+  roles:
+      - { role: ansistrano.deploy }
+

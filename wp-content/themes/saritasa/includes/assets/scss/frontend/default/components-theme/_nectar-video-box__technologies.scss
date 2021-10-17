@@ -1,0 +1,28 @@
+@import '../components-theme/popup_youtube';
+@import '../components/videobox';
+
+.video-box {
+    box-shadow: 0 0 1px 0 rgba(0, 0, 0, 0.14), 0 2px 1px -1px rgba(0, 0, 0, 0.12), 0 1px 3px 0 rgba(0, 0, 0, 0.2);
+
+    .play-button {
+        @media (max-width: 1000px) {
+            margin-top: 15vw;
+            margin-bottom: 15vw;
+        }
+
+        @media (max-width: 480px) {
+            padding: 20px 10px;
+        }
+
+        @media (max-width: 320px) {
+            max-width: 300px;
+        }
+
+        p {
+            @include font-avenir-theme(400, 42px, 1.2);
+            @media(max-width: 767px) {
+                font-size: 24px;
+            }
+        }
+    }
+}
